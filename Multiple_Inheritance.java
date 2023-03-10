@@ -1,22 +1,30 @@
-
 interface User{
     void getnum(Long s);
-    // void EnterNm(String name);
+    void EnterNm(String name);
 }
 interface Customer{
     void getnum(Long s);
-    // void EnterNm
+    void Enteradd();
 }
 interface Seller{
     void getnum(Long s);
 }
-class Biswajit implements Customer,Seller,User{
+class Developer implements Customer,Seller,User{
     public void getnum(Long s){
-        System.out.println(s);
+        System.out.println( "Ph. NO. : "+s);
     }
-}public class A_new {
+    public void EnterNm(String name){
+        System.out.println("Name is : "+name);
+    }
+    public void Enteradd(){
+        System.out.println("Address : St-498,NewYork,USA");
+   }
+}
+public class Multiple_Inheritance {
     public static void main(String[] args) {
-        Biswajit B = new Biswajit();
-        B.getnum(9583488596L);
+        Developer B = new Developer();
+        B.getnum(9999585599L);
+        B.EnterNm("Good Boy");
+        B.Enteradd();
     }
 }
